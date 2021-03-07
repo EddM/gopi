@@ -30,7 +30,7 @@ func main() {
 }
 
 func run() {
-  cfg := pixelgl.WindowConfig{
+  cfg := pixelgl.WindowConfig {
     Bounds: pixel.R(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT),
     VSync: true,
   }
@@ -50,9 +50,9 @@ func run() {
   drawRenderer := imdraw.New(nil)
   textRenderer := text.New(pixel.V(20, 40), atlas)
   generations := 0
-  vectors := []Vector{}
+  vectors := []Vector {}
 
-  midPoint := Vector{
+  midPoint := Vector {
     X: WINDOW_WIDTH / 2,
     Y: WINDOW_HEIGHT / 2,
   }
@@ -80,7 +80,6 @@ func run() {
     }
 
     pi := (float64(qualifiedPoints) / float64(generations)) * 4
-
     renderOutput(pi, generations, textRenderer)
     textRenderer.Draw(window, pixel.IM.Scaled(textRenderer.Orig, 2))
     drawRenderer.Draw(window)
@@ -157,7 +156,7 @@ func makeVector() Vector {
   x := SQUARE_SIZE * rand.Float64()
   y := SQUARE_SIZE * rand.Float64()
 
-  return Vector{
+  return Vector {
     X: x,
     Y: y,
   }
