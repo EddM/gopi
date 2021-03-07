@@ -162,11 +162,3 @@ func makeVector() Vector {
     Y: y,
   }
 }
-
-func Abs(number float64) float64 {
-  if number < 0 {
-    return -number
-  }
-
-  return number
-}
